@@ -331,7 +331,7 @@ ul {
 
 /* Weather */
 .weather {
-  margin-top: 140px;
+  margin-top: 190px;
   padding: 1rem;
   border-radius: var(--radius-xl);
   background: linear-gradient(135deg, var(--color-sun-300) 0%, var(--color-sun-500) 100%);
