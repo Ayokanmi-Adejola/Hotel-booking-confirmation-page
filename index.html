@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Hotel booking confirmation page</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="page">
+    <!-- Mobile header -->
+    <header class="mobile-header">
+      <a href="./" class="brand brand--small">
+        <img src="./assets/images/icon-sun.svg" alt="" class="brand__icon" width="24" height="24">
+        <span class="brand__word brand__word--maison">Maison</span>
+        <span class="brand__word brand__word--soleil">Soleil</span>
+      </a>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="sidebar" aria-label="Open navigation menu">
+        <img src="./assets/images/icon-menu.svg" alt="" width="20" height="20">
+      </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar" aria-label="Guest navigation">
+      <div class="sidebar__inner">
+        <div class="sidebar__top">
+          <a href="./" class="brand">
+            <img src="./assets/images/icon-sun.svg" alt="" class="brand__icon" width="32" height="32">
+            <span class="brand__word brand__word--maison">Maison</span>
+            <span class="brand__word brand__word--soleil">Soleil</span>
+          </a>
+          <hr style="border: none; border-top: 2px dashed hsl(0, 0%, 82%); width: 100%; margin-top: 15px;">
+
+          <button type="button" class="sidebar__close" aria-label="Close navigation menu">
+            <img src="./assets/images/icon-close.svg" alt="" width="20" height="20">
+          </button>
+
+          <nav class="nav" aria-label="Guest">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link nav__link--active" aria-current="page">
+                  <img src="./assets/images/icon-bed.svg" alt="" class="nav__icon" width="18" height="18">
+                  Your stay
+                  <span class="nav__badge" aria-hidden="true">1</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <img src="./assets/images/icon-house.svg" alt="" class="nav__icon" width="18" height="18">
+                  The house
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <img src="./assets/images/icon-pin.svg" alt="" class="nav__icon" width="18" height="18">
+                  Around town
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <img src="./assets/images/icon-breakfast-outline.svg" alt="" class="nav__icon" width="18" height="18">
+                  Breakfast
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <img src="./assets/images/icon-mail.svg" alt="" class="nav__icon" width="18" height="18">
+                  Messages
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="weather">
+            <p class="weather__label">Today in Cassis</p>
+            <div class="weather__body">
+              <div>
+                <p class="weather__temp">27°</p>
+                <p class="weather__desc">Sunny · light breeze</p>
+              </div>
+              <img src="./assets/images/icon-weather.svg" alt="" class="weather__icon" width="56" height="56">
+            </div>
+          </div>
+        </div>
+
+        <footer class="sidebar__footer">
+          <hr style="border: none; border-top: 2px dashed hsl(0, 0%, 82%); width: 100%; margin-bottom: 15px;">
+          <p class="sidebar__est">Est. 1987</p>
+          <p class="sidebar__address">Maison Soleil · 12 Rue des Oliviers · Cassis</p>
+          <p class="sidebar__copy">© 2026 Maison Soleil</p>
+        </footer>
+      </div>
+    </aside>
+
+    <div class="overlay" aria-hidden="true"></div>
+
+    <!-- Main content -->
+    <main class="main">
+      <header class="main-header">
+        <div>
+          <p class="eyebrow">Booking · Confirmed</p>
+          <h1 class="title">Bienvenue, <span class="title__accent">Lucia.</span></h1>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn--print" onclick="window.print()">Print receipt</button>
+          <button type="button" class="btn btn--calendar">Add to calendar</button>
+        </div>
+      </header>
+
+      <!-- Booking cards -->
+      <section class="booking-cards" aria-label="Booking summary">
+        <article class="card receipt-card">
+          <div class="receipt-card__header">
+            <p class="receipt-card__label">Receipt</p>
+            <p class="receipt-card__number">№ MS-2026<br>0421-AH</p>
+          </div>
+
+          <h2 class="receipt-card__title">Your stay</h2>
+
+          <div class="receipt-card__dates">
+            <div>
+              <p class="receipt-card__date-label">Check in</p>
+              <p class="receipt-card__date">25 Apr</p>
+              <p class="receipt-card__date-meta">Saturday · 15:00</p>
+            </div>
+            <div>
+              <p class="receipt-card__date-label">Check out</p>
+              <p class="receipt-card__date">29 Apr</p>
+              <p class="receipt-card__date-meta">Wednesday · 11:00</p>
+            </div>
+          </div>
+
+          <ul class="line-items">
+            <li class="line-item">
+              <span>Room · La Garrigue · 4 nights</span>
+              <span>€ 620.00</span>
+            </li>
+            <li class="line-item">
+              <span>Breakfast · 2 guests</span>
+              <span>€ 96.00</span>
+            </li>
+            <li class="line-item">
+              <span>Tourist tax</span>
+              <span>€ 14.40</span>
+            </li>
+          </ul>
+
+          <div class="receipt-card__total">
+            <span class="receipt-card__total-label">Total paid</span>
+            <span class="receipt-card__total-value">€ 730.40</span>
+          </div>
+
+          <div class="receipt-card__footer">
+            <p>Paid · Wise · GBP</p>
+            <img src="./assets/images/icon-barcode.svg" alt="" width="93" height="28">
+          </div>
+        </article>
+
+        <article class="card host-card">
+         <hr style="border: none; border-top: 2px dashed hsl(0, 0%, 82%); width: 100%;">
+
+          <div class="host-card__header">
+            <p class="host-card__label" style="margin-top: 20px;">Welcome card</p>
+            <img src="./assets/images/icon-sun.svg" alt="" class="host-card__sun" width="40" height="40">
+          </div>
+          <div class="host-card__body">
+            <p class="host-card__greeting">A note from your host,<br><span class="host-card__name">Margaux.</span></p>
+            <p class="host-card__note">We're so glad you're coming. The shutters will be open, <br /> the lemonade cold, and the cat - Poivre - pretending <br /> not to notice you.</p>
+          </div>
+          <div class="host-card__room">
+            <span class="host-card__room-label">Room</span>
+            <span class="host-card__room-name">La Garrigue</span>
+          </div>
+        </article>
+
+        <p class="fan-hint">
+          <img src="./assets/images/icon-sparkle.svg" alt="" width="8" height="8">
+          <span>Hover to fan</span>
+          <img src="./assets/images/icon-sparkle.svg" alt="" width="8" height="8">
+        </p>
+      </section>
+
+      <!-- Guest info row -->
+      <section class="info-row" aria-label="Guest information">
+        <article class="info-card info-card--arrival">
+          <div class="info-card__header">
+            <div class="info-card__icon-wrap" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M3.979 9.022c0 4.284 5.057 8.378 6.02 8.378.964 0 6.021-4.094 6.021-8.378a6.02 6.02 0 1 0-12.041 0"/><path d="M12.006 8.972a2.006 2.006 0 1 0-4.013 0 2.006 2.006 0 0 0 4.013 0" clip-rule="evenodd"/></g></svg>
+            </div>
+            <h3 class="info-card__title">Arrival</h3>
+            <span class="info-card__number" aria-hidden="true">01</span>
+          </div>
+          <p class="info-card__subtitle">Check-in from 15:00</p>
+          <p class="info-card__date">Sat, 25 April</p>
+          <p class="info-card__body">Ring the brass bell by the blue door. If we're at the market, the key is in the terracotta pot by the olive tree.</p>
+        </article>
+
+        <article class="info-card info-card--wifi">
+          <div class="info-card__header">
+            <div class="info-card__icon-wrap" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24"><g fill="currentColor"><path d="M20.919 7.756c-5.167-5.114-12.67-5.113-17.835 0a1.96 1.96 0 0 0-.128 2.644l.853 1.014a.306.306 0 0 0 .453.014c2.14-2.193 4.863-3.396 7.727-3.399h.012c2.866 0 5.594 1.201 7.741 3.396a.306.306 0 0 0 .453-.014l.85-1.01a1.963 1.963 0 0 0-.126-2.645"/><path d="M18.835 13.028a.294.294 0 0 0-.009-.392c-1.886-2.006-4.3-3.107-6.825-3.107h-.01c-2.524.003-4.933 1.105-6.813 3.112a.295.295 0 0 0-.008.391l1.804 2.145a.31.31 0 0 0 .448.023c1.296-1.2 2.899-1.857 4.567-1.86h.014c1.67 0 3.278.653 4.583 1.854a.31.31 0 0 0 .446-.024z"/><path d="m10.517 19.388-2.188-2.601a.29.29 0 0 1 .016-.396c1.037-1 2.32-1.549 3.647-1.552h.01c1.329 0 2.616.546 3.659 1.543a.29.29 0 0 1 .017.397l-2.195 2.608a1.932 1.932 0 0 1-2.967 0"/></g></svg>
+            </div>
+            <h3 class="info-card__title">Wifi</h3>
+            <span class="info-card__number" aria-hidden="true">02</span>
+          </div>
+          <p class="info-card__subtitle">Le Soleil · Guest</p>
+          <p class="info-card__hint">Password below</p>
+          <div class="wifi-details">
+            <div class="wifi-row">
+              <span class="wifi-row__label">Network</span>
+              <span class="wifi-row__value">Le Soleil · Guest</span>
+            </div>
+            <div class="wifi-row wifi-row--password">
+              <span class="wifi-row__label">Password</span>
+              <span class="wifi-row__value" id="wifi-password">soleil-2026</span>
+              <button type="button" class="btn btn--small btn--copy" id="copy-btn" aria-label="Copy Wi-Fi password to clipboard">
+                <span class="copy-text">Copy</span>
+                <span class="copy-feedback" aria-live="polite" hidden>Copied!</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="info-card info-card--breakfast">
+          <div class="info-card__header">
+            <div class="info-card__icon-wrap" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"><path d="M15.98 17.462H4.02c-.67 0-1.265-.43-1.477-1.064a.835.835 0 0 1 .793-1.1h13.328c.57 0 .973.559.793 1.1a1.56 1.56 0 0 1-1.477 1.064" clip-rule="evenodd"/><path d="M11.102 7.888v-.943a1.103 1.103 0 0 0-2.204 0v.943"/><path d="m3.553 15.299-.034-.691a6.49 6.49 0 1 1 12.963 0l-.035.69M15.02 4.463a.995.995 0 0 0 0 1.409m-11.958 0a.995.995 0 0 1 0 1.408M6.78 2.538a.996.996 0 0 1 0 1.409.995.995 0 0 0 0 1.408"/></g></svg>
+            </div>
+            <h3 class="info-card__title">Breakfast</h3>
+            <span class="info-card__number" aria-hidden="true">03</span>
+          </div>
+          <p class="info-card__subtitle">Served 8 - 10:30</p>
+          <p class="info-card__date">On the terrace</p>
+          <p class="info-card__body">Fresh figs, Marseille honey, pain au levain, and espresso. Gluten-free option? Leave a note the night before.</p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/Ayokanmi-Adejola">Ayokanmi Adejola</a>.
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
